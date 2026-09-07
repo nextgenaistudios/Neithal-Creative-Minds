@@ -1,20 +1,19 @@
 /* ==========================================================================
    Neithal Creatives — Design System
-   Palette drawn from the brand: deep tide teal + horizon gold, set against
-   a cool seafoam neutral (not the cliché warm-cream/terracotta combo).
+   Palette aligned to the NEITHAL brand: charcoal + gold, supported by white and ivory neutrals.
    Type: Fraunces (headlines, editorial warmth) + Work Sans (everything else).
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --deep-tide: #0B4F5C;
-  --deep-tide-dark: #073238;
-  --horizon-gold: #E8A94A;
-  --seafoam: #F1F4F2;
-  --pale-tide: #DCEBEA;
-  --deep-ink: #16262A;
-  --net-rope: #8A7355;
+  --deep-tide: #242628;
+  --deep-tide-dark: #17191B;
+  --horizon-gold: #C28A2C;
+  --seafoam: #F7F5EF;
+  --pale-tide: #EEEAE1;
+  --deep-ink: #242628;
+  --net-rope: #8B6A32;
   --white: #FFFFFF;
 
   --font-display: 'Fraunces', Georgia, serif;
@@ -71,9 +70,9 @@ button { font-family: inherit; cursor: pointer; }
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .btn-primary { background: var(--horizon-gold); color: var(--deep-tide-dark); }
-.btn-primary:hover { background: #d99732; }
+.btn-primary:hover { background: #A97420; }
 .btn-outline { border-color: var(--seafoam); color: var(--seafoam); }
-.btn-outline:hover { background: rgba(241,244,242,0.12); }
+.btn-outline:hover { background: rgba(247,245,239,0.12); }
 .btn-outline-dark { border-color: var(--deep-tide); color: var(--deep-tide); }
 .btn-outline-dark:hover { background: var(--pale-tide); }
 
@@ -83,7 +82,7 @@ button { font-family: inherit; cursor: pointer; }
   top: 0;
   z-index: 100;
   background: var(--white);
-  box-shadow: 0 1px 3px rgba(11,79,92,0.1);
+  box-shadow: 0 1px 3px rgba(36,38,40,0.1);
 }
 .nav {
   display: flex;
@@ -144,11 +143,11 @@ button { font-family: inherit; cursor: pointer; }
     gap: 0;
     max-height: 0;
     overflow: hidden;
-    box-shadow: 0 8px 16px rgba(11,79,92,0.1);
+    box-shadow: 0 8px 16px rgba(36,38,40,0.1);
     transition: max-height 0.3s ease;
   }
   .nav-links.open { max-height: 320px; }
-  .nav-links a { display: block; padding: 1rem var(--gutter); border-top: 1px solid rgba(11,79,92,0.1); }
+  .nav-links a { display: block; padding: 1rem var(--gutter); border-top: 1px solid rgba(36,38,40,0.1); }
   .nav-links a::after { display: none; }
   .nav-toggle { display: block; }
 }
@@ -212,9 +211,9 @@ button { font-family: inherit; cursor: pointer; }
   grid-template-columns: 90px 1fr;
   gap: 1.5rem;
   padding: 2.2rem 0;
-  border-top: 1px solid rgba(11,79,92,0.15);
+  border-top: 1px solid rgba(36,38,40,0.15);
 }
-.service-row:last-child { border-bottom: 1px solid rgba(11,79,92,0.15); }
+.service-row:last-child { border-bottom: 1px solid rgba(36,38,40,0.15); }
 .service-row .icon { width: 52px; height: 52px; color: var(--deep-tide); }
 .service-row h3 { font-size: 1.35rem; margin-bottom: 0.35em; }
 .service-row p { margin-bottom: 0.6em; }
@@ -244,12 +243,12 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 900px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .portfolio-grid { grid-template-columns: 1fr; } }
 
-.portfolio-item { border: 1px solid rgba(11,79,92,0.2); background: var(--white); }
+.portfolio-item { border: 1px solid rgba(36,38,40,0.2); background: var(--white); }
 .portfolio-thumb {
   aspect-ratio: 4 / 3;
   background: linear-gradient(135deg, var(--deep-tide), var(--deep-tide-dark));
   display: flex; align-items: center; justify-content: center;
-  color: rgba(241,244,242,0.55);
+  color: rgba(247,245,239,0.55);
   font-family: var(--font-display);
   font-style: italic;
   font-size: 0.95rem;
@@ -297,7 +296,7 @@ button { font-family: inherit; cursor: pointer; }
 .field input, .field select, .field textarea {
   width: 100%;
   border: none;
-  border-bottom: 1.5px solid rgba(11,79,92,0.3);
+  border-bottom: 1.5px solid rgba(36,38,40,0.3);
   background: transparent;
   padding: 0.6rem 0.1rem;
   font-family: var(--font-body);
@@ -332,7 +331,7 @@ button { font-family: inherit; cursor: pointer; }
 
 .social-row { display: flex; gap: 0.9rem; margin-top: 1.6rem; }
 .social-row a {
-  width: 38px; height: 38px; border: 1px solid rgba(241,244,242,0.4);
+  width: 38px; height: 38px; border: 1px solid rgba(247,245,239,0.4);
   display: flex; align-items: center; justify-content: center;
 }
 .social-row svg { width: 18px; height: 18px; }
@@ -359,15 +358,15 @@ button { font-family: inherit; cursor: pointer; }
 }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
 .footer-grid h4 { color: var(--white); font-size: 0.95rem; margin-bottom: 1rem; font-family: var(--font-body); font-weight: 600; }
-.footer-grid p { color: rgba(241,244,242,0.75); font-size: 0.92rem; }
+.footer-grid p { color: rgba(247,245,239,0.75); font-size: 0.92rem; }
 .footer-grid ul li { margin-bottom: 0.6rem; }
-.footer-grid a { color: rgba(241,244,242,0.85); font-size: 0.92rem; }
+.footer-grid a { color: rgba(247,245,239,0.85); font-size: 0.92rem; }
 .footer-grid a:hover { color: var(--horizon-gold); }
 .footer-bottom {
-  border-top: 1px solid rgba(241,244,242,0.12);
+  border-top: 1px solid rgba(247,245,239,0.12);
   padding: 1.2rem var(--gutter);
   font-size: 0.85rem;
-  color: rgba(241,244,242,0.6);
+  color: rgba(247,245,239,0.6);
   text-align: center;
 }
 
